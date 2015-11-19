@@ -1,0 +1,14 @@
+
+[Unit]
+Description=SparkMaster  Service
+
+[Service]
+ExecStart=/opt/spark/sbin/start-master.sh 
+ExecStop=/opt/spark/sbin/stop-slave.sh
+Type=forking
+
+
+
+[Install]
+WantedBy=multi-user.target
+

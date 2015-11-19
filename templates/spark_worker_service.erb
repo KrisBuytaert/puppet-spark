@@ -1,0 +1,14 @@
+
+[Unit]
+Description=SparkWorker  Service
+
+[Service]
+ExecStart=/opt/spark/sbin/start-slave.sh <%= @master_host %>:7077
+ExecStop=/opt/spark/sbin/stop-slave.sh
+Type=forking
+
+
+
+[Install]
+WantedBy=multi-user.target
+
